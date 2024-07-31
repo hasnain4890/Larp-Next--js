@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #0b0521;
+  --secondary-bg: #0c081d;
+  --primary-blue: #42e8e0;
+  --secondary-blue: #16bab2;
+  --primary-grey: #9e9e9e;
+  --grey: #7d7d7d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.custom-toast {
+  backdrop-filter: blur(8px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 0.5rem !important;
+}
+
+html {
+  scroll-snap-type: x mandatory;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
